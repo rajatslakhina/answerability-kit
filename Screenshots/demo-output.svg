@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <rect width="1000" height="700" fill="#0d1117"/>
+  <rect x="0" y="0" width="1000" height="34" fill="#161b22"/>
+  <circle cx="22" cy="17" r="6" fill="#f85149"/>
+  <circle cx="42" cy="17" r="6" fill="#e3b341"/>
+  <circle cx="62" cy="17" r="6" fill="#3fb950"/>
+  <text x="86" y="22" fill="#8b949e" font-size="12">swift run AnswerabilityDemo &#8212; real output</text>
+
+  <text x="24" y="62" fill="#8b949e" font-size="12.5">AnswerabilityKit - deciding whether a question is worth paying to answer</text>
+  <text x="24" y="80" fill="#30363d" font-size="12.5">==============================================================================</text>
+
+  <text x="24" y="108" fill="#e6edf3" font-size="12.5">2. The corpus is about the subject and never states the fact</text>
+  <text x="24" y="126" fill="#8b949e" font-size="12.5">&#160;&#160;Q: When did the streaming aggregator start dropping frames?</text>
+  <text x="24" y="144" fill="#e3b341" font-size="12.5">&#160;&#160;baseline (similarity 60% &gt;= 50%): SEND</text>
+  <text x="24" y="162" fill="#f85149" font-size="12.5">&#160;&#160;AnswerabilityKit: BLOCKED insufficient - missing: a time</text>
+  <text x="24" y="180" fill="#8b949e" font-size="12.5">&#160;&#160;coverage: 50%</text>
+  <text x="24" y="198" fill="#c9d1d9" font-size="12">&#160;&#160;&#160;&#160;subject&#160;&#160;&#160;&#160;streaming aggregator start dropping frames&#160;&#160;affirm 0.60&#160;&#160;deny 0.00</text>
+  <text x="24" y="216" fill="#c9d1d9" font-size="12">&#160;&#160;&#160;&#160;attribute&#160;&#160;a time&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;affirm 0.00&#160;&#160;deny 0.00&#160;&#160;-</text>
+
+  <text x="24" y="252" fill="#e6edf3" font-size="12.5">3. Evidence disagrees with itself</text>
+  <text x="24" y="270" fill="#8b949e" font-size="12.5">&#160;&#160;Q: How many times does the provider gateway retry?</text>
+  <text x="24" y="288" fill="#e3b341" font-size="12.5">&#160;&#160;baseline (similarity 60% &gt;= 50%): SEND</text>
+  <text x="24" y="306" fill="#f85149" font-size="12.5">&#160;&#160;AnswerabilityKit: BLOCKED contested - disputed: times provider gateway retry</text>
+  <text x="24" y="324" fill="#8b949e" font-size="12.5">&#160;&#160;coverage: 100%&#160;&#160;&#8592; plenty of evidence. that is why a coverage score cannot see it</text>
+  <text x="24" y="342" fill="#c9d1d9" font-size="12">&#160;&#160;&#160;&#160;subject&#160;&#160;&#160;&#160;times provider gateway retry&#160;&#160;affirm 0.75&#160;&#160;deny 0.75&#160;&#160;kb-five, !kb-none</text>
+
+  <text x="24" y="378" fill="#e6edf3" font-size="12.5">4. The question could not be read</text>
+  <text x="24" y="396" fill="#8b949e" font-size="12.5">&#160;&#160;Q: What about it?</text>
+  <text x="24" y="414" fill="#8b949e" font-size="12.5">&#160;&#160;baseline (similarity 0% &gt;= 50%): refuse&#160;&#160;&#8592; confidently calls it unanswerable</text>
+  <text x="24" y="432" fill="#a371f7" font-size="12.5">&#160;&#160;AnswerabilityKit: UNDETERMINED - 0 aspect(s) read, 1 required to rule</text>
+  <text x="24" y="450" fill="#8b949e" font-size="12.5">&#160;&#160;coverage: n/a&#160;&#160;&#8592; no rate is reported for work that was never done</text>
+
+  <text x="24" y="486" fill="#e6edf3" font-size="12.5">8. Scenario 2 again, with minimumAspects raised to 3</text>
+  <text x="24" y="504" fill="#a371f7" font-size="12.5">&#160;&#160;AnswerabilityKit: UNDETERMINED - 2 aspect(s) read, 3 required to rule</text>
+  <text x="24" y="522" fill="#8b949e" font-size="12.5">&#160;&#160;raising the stricter-sounding knob turned a refusal into a declined ruling</text>
+
+  <text x="24" y="558" fill="#30363d" font-size="12.5">==============================================================================</text>
+  <text x="24" y="578" fill="#8b949e" font-size="12.5">gate ruled on 4 of 6 questions, declined to rule on 2</text>
+  <text x="24" y="596" fill="#3fb950" font-size="12.5">&#160;&#160;admitted&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2</text>
+  <text x="24" y="614" fill="#f85149" font-size="12.5">&#160;&#160;blocked insufficient&#160;&#160;1</text>
+  <text x="24" y="632" fill="#f85149" font-size="12.5">&#160;&#160;blocked contested&#160;&#160;&#160;&#160;&#160;1</text>
+  <text x="24" y="650" fill="#8b949e" font-size="12.5">&#160;&#160;abstention rate&#160;&#160;&#160;&#160;&#160;&#160;&#160;50%</text>
+  <text x="24" y="672" fill="#e6edf3" font-size="12.5">baseline would have sent 3, the gate sent 2&#160;&#160;&#183;&#160;&#160;3 send decisions differ</text>
+  <text x="24" y="690" fill="#e3b341" font-size="12.5">provider spend avoided at $0.0021/call: $0.0042</text>
+</svg>
